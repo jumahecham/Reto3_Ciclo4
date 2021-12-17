@@ -37,4 +37,8 @@ public class OrderRepository {
     public List<Order> getOrderByZone(String zone) {
         return orderCrudRepository.findBySalesManZone(zone);
     }
-}  
+    public List<Order> getOrderBySalesmanId(Integer id) {
+        return orderCrudRepository.findBySalesManId(id);
+    }
+    
+}

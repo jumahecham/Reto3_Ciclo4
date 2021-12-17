@@ -14,4 +14,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  */
 public interface InterfaceOrder extends MongoRepository<Order, Integer> {
     List<Order> findBySalesManZone(String zone);
+    List<Order> findBySalesManId(Integer id);
 }
