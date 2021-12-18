@@ -60,4 +60,12 @@ public class ChocolateController {
         return accessoryService.delete(reference);
     } 
     
+    @GetMapping("/price/{price}")
+    public List<Chocolate> getByPrice(@PathVariable("price") Double price) {
+        return accessoryService.getByPrice(price);
+    }   
+    @GetMapping("/description/{description}")
+    public List<Chocolate> getByDescriptionContains(@PathVariable("description") String description) {
+        return accessoryService.getByDescriptionContains(description);
+    }
 }

@@ -39,4 +39,10 @@ public class ChocolateRepository {
     public void delete(Chocolate clothe) {
         repository.delete(clothe);
     }
+    public List<Chocolate> getByPrice(Double price) {
+        return repository.findByPrice(price);
+    }
+    public List<Chocolate> getByDescriptionContains(String description) {
+        return repository.findByDescriptionContainingIgnoreCase(description);
+    }
 }

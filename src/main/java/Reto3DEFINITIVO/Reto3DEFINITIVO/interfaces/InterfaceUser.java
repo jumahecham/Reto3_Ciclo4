@@ -5,6 +5,7 @@
 package Reto3DEFINITIVO.Reto3DEFINITIVO.interfaces;
 
 import Reto3DEFINITIVO.Reto3DEFINITIVO.modelo.User;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
@@ -13,7 +14,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author USUARIO
  */
 public interface InterfaceUser extends MongoRepository<User, Integer> {
-     Optional<User> findByEmail(String email);
+    Optional<User> findByEmail(String email);
     Optional<User> findByEmailAndPassword(String email,String password);
-    
+    List<User> findByMonthBirthtDay(String month);
 }

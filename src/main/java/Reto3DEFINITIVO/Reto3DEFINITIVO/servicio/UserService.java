@@ -110,6 +110,9 @@ public class UserService {
         }
     }
 
-    
+    public List <User> getByMonthBirthDay (String month){
+        return userRepository.getByMonthBirthDay(month);
+                
+    }
     
 }

@@ -75,5 +75,10 @@ public class ChocolateService {
         return aBoolean;
     }
     
-    
+    public List<Chocolate> getByPrice(Double price){
+        return clotheRepository.getByPrice(price);
+    }
+    public List<Chocolate> getByDescriptionContains(String description){
+        return clotheRepository.getByDescriptionContains(description);
+    }
 }
